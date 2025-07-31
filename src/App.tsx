@@ -8,7 +8,6 @@ import NotFound from "./pages/NotFound";
 import UserAcquisitionPage from "./pages/UserAcquisition";
 import RetargetingReEngagementPage from "./pages/Retargeting";
 import BrandingPage from "./pages/Branding";
-import ProgrammaticUAPage from "./pages/Programatic";
 import ContactUsPage from "./pages/Contact";
 import AboutUsPage from "./pages/Aboutus";
 
@@ -25,7 +24,6 @@ const App = () => (
           <Route path="/user-acquisition" element={<UserAcquisitionPage />} />
           <Route path="/retargeting" element={<RetargetingReEngagementPage/>} />
           <Route path="/branding" element={<BrandingPage/>} />
-          <Route path="/programmatic" element={<ProgrammaticUAPage/>} />
           <Route path="/contact" element={<ContactUsPage/>} />
           <Route path="/about" element={<AboutUsPage/>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
