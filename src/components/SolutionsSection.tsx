@@ -100,15 +100,15 @@ const SolutionsSection = () => {
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">104+</div>
-            <div className="text-sm text-muted-foreground">Country Reach</div>
+            <div className="text-sm text-muted-foreground">Countries</div>
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">100 Billion+ </div>
             <div className="text-sm text-muted-foreground">Impressions/Day</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">24/7</div>
-            <div className="text-sm text-muted-foreground">Support</div>
+            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">50+</div>
+            <div className="text-sm text-muted-foreground">Exchanges</div>
           </div>
         </div>
       </div>

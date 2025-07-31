@@ -110,11 +110,6 @@ const DashboardSection = () => {
                   description: "Deep insights into user behavior, retention rates, LTV, and cohort analysis to optimize your growth strategy."
                 },
                 {
-                  icon: TrendingUp,
-                  title: "Predictive Insights",
-                  description: "AI-powered forecasting and recommendations to identify growth opportunities and optimize budget allocation."
-                },
-                {
                   icon: Monitor,
                   title: "Custom Reporting",
                   description: "Create custom reports tailored to your specific KPIs and share insights with your team."

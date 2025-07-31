@@ -2,33 +2,33 @@ import { Shield, Zap, Globe, Star, TrendingUp, Target } from "lucide-react";
 
 const benefits = [
   {
-    icon: Zap,
+    
     title: "AI-Powered Optimization",
     description: "Machine learning algorithms continuously optimize your campaigns for maximum performance and ROI."
   },
   {
-    icon: Shield,
+    
     title: "Fraud-Free Results",
     description: "Advanced fraud detection and prevention systems ensure every install is genuine and valuable."
   },
   {
-    icon: Globe,
+    
     title: "2.5M+ Apps Globally",
     description: "Access to the world's largest network of premium publishers and advertising platforms."
   },
   {
-    icon: Star,
+    
     title: "Global Reach with Local Insights",
-    description: "Run campaigns in over 70 countries with support for localization, cultural adaptation, and localized optimization strategies."
+    description: "Run campaigns in over 104 countries with support for localization, cultural adaptation, and localized optimization strategies."
   },
   {
-    icon: TrendingUp,
+    
     title: "Proven Growth Results",
     description: "Track record of scaling apps from thousands to millions of users with sustainable growth strategies."
   },
   {
-    icon: Target,
-    title: "Advance Targeting",
+   
+    title: "Advanced Targeting",
     description: "Advanced audience segmentation and lookalike modeling to reach your ideal users efficiently."
   }
 ];
@@ -55,10 +55,6 @@ const WhyChooseSection = () => {
               className="group p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:shadow-brand transition-all duration-500 transform hover:-translate-y-2"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Icon */}
-              <div className="mb-6 w-16 h-16 bg-gradient-secondary rounded-2xl flex items-center justify-center group-hover:animate-float transition-all duration-300">
-                <benefit.icon className="w-8 h-8 text-white" />
-              </div>
 
               {/* Title */}
               <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:gradient-text transition-all duration-300">

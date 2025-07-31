@@ -61,19 +61,32 @@ const AboutUsPage = () => {
           </div>
 
           {/* Values/Mission */}
-          <div className="card-white rounded-2xl px-6 py-8 shadow-brand border border-gray-200 mb-12 max-w-3xl mx-auto text-center animate-fade-in-up">
-            <h2 className="text-2xl font-bold text-gray-900 mb-3">Our Mission</h2>
-            <p className="text-gray-700 text-base sm:text-lg mb-5">
-              To empower app founders and marketers to grow smarter, faster, and more profitably — with a focus on <span className="gradient-text font-semibold">quality users, creative brand experiences,</span> and long-term, transparent value.
-            </p>
-            <div className="flex flex-wrap justify-center gap-5 mt-4 text-[#3a3ad9] font-medium">
-              <span>🚀 Innovation-Driven</span>
-              <span>🤝 Transparent</span>
-              <span>🌎 Global Mindset</span>
-              <span>💡 Creative First</span>
-              <span>📊 Data Obsessed</span>
-            </div>
-          </div>
+          <div className="card-white rounded-2xl px-8 py-10 shadow-brand border border-gray-200 mb-12 max-w-3xl mx-auto text-center animate-fade-in-up">
+  <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
+  <p className="text-gray-800 text-base sm:text-lg mb-6 leading-relaxed max-w-xl mx-auto">
+    At Appladder, we’re passionate about helping app founders and marketers achieve sustainable growth.  
+    We combine deep data insights with creative strategies to deliver real users who stick around — driving value beyond just installs.  
+    Honest results, clear communication, and long-term partnerships are at the heart of everything we do.
+  </p>
+  <div className="flex flex-wrap justify-center gap-6 mt-6 text-[#3a3ad9] font-semibold">
+    <div className="flex items-center gap-2 bg-[#e0e7ff] text-[#3a3ad9] rounded-full px-4 py-2 shadow-sm select-none">
+      <span className="text-xl">🚀</span> Always innovating to stay ahead of the curve
+    </div>
+    <div className="flex items-center gap-2 bg-[#e0e7ff] text-[#3a3ad9] rounded-full px-4 py-2 shadow-sm select-none">
+      <span className="text-xl">🤝</span> Transparent & honest communication — no hidden agendas
+    </div>
+    <div className="flex items-center gap-2 bg-[#e0e7ff] text-[#3a3ad9] rounded-full px-4 py-2 shadow-sm select-none">
+      <span className="text-xl">🌍</span> Global expertise with local market understanding
+    </div>
+    <div className="flex items-center gap-2 bg-[#e0e7ff] text-[#3a3ad9] rounded-full px-4 py-2 shadow-sm select-none">
+      <span className="text-xl">🎨</span> Creativity that connects brands and users meaningfully
+    </div>
+    <div className="flex items-center gap-2 bg-[#e0e7ff] text-[#3a3ad9] rounded-full px-4 py-2 shadow-sm select-none">
+      <span className="text-xl">📈</span> Data-driven decisions that power continuous improvement
+    </div>
+  </div>
+</div>
+
 
           {/* Core Services */}
           <h2 className="text-2xl sm:text-3xl font-bold mb-7 text-center text-gray-900">What We Do</h2>
