@@ -8,7 +8,7 @@ const DashboardSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Advanced <span className="gradient-text">Analytics Dashboard</span>
+            Advanced <span className="gradient-text">Analytics</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Real-time insights and comprehensive reporting to optimize your app growth strategy
@@ -94,7 +94,7 @@ const DashboardSection = () => {
           {/* Features List */}
           <div className="space-y-6">
             <h3 className="text-3xl font-bold mb-8">
-              Everything you need in one <span className="gradient-text">powerful dashboard</span>
+              Everything you need in one <span className="gradient-text">powerful software.</span>
             </h3>
 
             <div className="space-y-6">
@@ -117,7 +117,7 @@ const DashboardSection = () => {
                 {
                   icon: Monitor,
                   title: "Custom Reporting",
-                  description: "Create custom reports and dashboards tailored to your specific KPIs and share insights with your team."
+                  description: "Create custom reports tailored to your specific KPIs and share insights with your team."
                 }
               ].map((feature, index) => (
                 <Card key={index} className="group hover:shadow-card transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm">

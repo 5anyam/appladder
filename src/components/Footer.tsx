@@ -76,18 +76,6 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink
-                  to="/programmatic"
-                  className={({ isActive }) => 
-                    `text-slate-300 hover:text-white transition-colors duration-300 ${
-                      isActive ? "text-[#00F0FF]" : ""
-                    }`
-                  }
-                >
-                  Programmatic UA
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
                   to="/retargeting"
                   className={({ isActive }) => 
                     `text-slate-300 hover:text-white transition-colors duration-300 ${

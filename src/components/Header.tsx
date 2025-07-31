@@ -6,12 +6,11 @@ import { NavLink, useLocation } from "react-router-dom";
 
 const navItems = [
   { name: "Home", to: "/" },
+  { name: "About", to: "/about" },
   { name: "User Acquisition", to: "/user-acquisition" },
   { name: "Retargeting", to: "/retargeting" },
   { name: "Branding", to: "/branding" },
-  { name: "Programmatic UA", to: "/programmatic" },
   { name: "Contact", to: "/contact" },
-  { name: "About", to: "/about" },
 ];
 
 const Header = () => {

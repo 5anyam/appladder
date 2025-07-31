@@ -53,7 +53,7 @@ const SolutionsSection = () => {
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-4">
           {solutions.map((solution, index) => (
             <Card 
               key={index}
