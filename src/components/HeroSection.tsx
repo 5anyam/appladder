@@ -72,25 +72,25 @@ const HeroSection = () => {
     <img
       src="/amazon.png"
       alt="Amazon"
-      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300 grayscale hover:grayscale-0 hover:opacity-100"
+      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300"
       title="Ecommerce - Amazon"
     />
     <img
       src="/888.png"
       alt="888"
-      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300 grayscale hover:grayscale-0 hover:opacity-100"
+      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300"
       title="Betting - 888"
     />
     <img
       src="/spotify.png"
       alt="Spotify"
-      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300 grayscale hover:grayscale-0 hover:opacity-100"
+      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300"
       title="Entertainment - Spotify"
     />
     <img
       src="/swiggy.png"
       alt="Swiggy"
-      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300 grayscale hover:grayscale-0 hover:opacity-100"
+      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300"
       title="Delivery - Swiggy"
     />
   </div>
