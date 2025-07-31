@@ -29,7 +29,7 @@ const Header = () => {
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-3">
             <div className="w-full h-10 bg-gradient-primary rounded-xl flex items-center justify-center">
-              <img className="h-10 w-full" src="./logo.jpg" alt="Appladder Logo"/>
+              <img className="h-10 w-28 lg:w-full" src="./logo.jpg" alt="Appladder Logo"/>
             </div>
           </NavLink>
 
