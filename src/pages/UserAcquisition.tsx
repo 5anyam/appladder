@@ -33,7 +33,7 @@ const ValueHighlights = [
   {
     icon: Shuffle,
     title: "Global, Cross-Exchange Access",
-    text: "Reach premium audiences on 600+ global ad platforms and exchanges—all managed seamlessly from a single dashboard.",
+    text: "Reach premium audiences on 600+ global ad platforms and exchanges—all managed seamlessly from a single platform.",
   },
   {
     icon: TrendingUp,
@@ -85,7 +85,7 @@ const steps = [
   {
     icon: BarChart3,
     title: "Analyze & Grow",
-    desc: "Live dashboards track everything: installs, engagement, spend, ROI—so you scale what works, instantly.",
+    desc: "Track everything: installs, engagement, spend, ROI—so you scale what works, instantly.",
     num: "04"
   }
 ];
@@ -94,7 +94,7 @@ const steps = [
 const faqs = [
   {
     q: "How do you combine manual UA and programmatic DSP?",
-    a: "Appladder unifies classic user acquisition and DSP-based programmatic buying: you get best-in-class targeting, AI bidding, and single-dashboard simplicity."
+    a: "Appladder unifies classic user acquisition and DSP-based programmatic buying: you get best-in-class targeting and AI bidding."
   },
   {
     q: "How quickly can I launch and see results?",
@@ -110,7 +110,7 @@ const faqs = [
   },
   {
     q: "What kind of reporting and transparency can I expect?",
-    a: "You'll access full-funnel, real-time analytics (installs, LTV, ROAS, events) in your dashboard—no hidden costs or numbers, ever."
+    a: "You'll access full-funnel, real-time analytics (installs, LTV, ROAS, events) in your reports no hidden costs or numbers, ever."
   }
 ];
 
