@@ -24,17 +24,14 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border shadow-sm">
+    <header className="fixed top-0 w-full z-50 bg-white border-b border-border shadow-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <NavLink to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center">
-              <div className="text-white text-lg font-bold select-none">A</div>
+            <div className="w-full h-10 bg-gradient-primary rounded-xl flex items-center justify-center">
+              <img className="h-10 w-full" src="./logo.jpg" alt="Appladder Logo"/>
             </div>
-            <span className="text-xl font-bold gradient-text select-none cursor-pointer">
-              Appladder
-            </span>
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -46,7 +43,7 @@ const Header = () => {
                 onClick={handleNavClick}
                 className={({ isActive }) =>
                   `text-sm font-medium transition-colors duration-200 hover:text-foreground ${
-                    isActive ? "text-[#00F0FF]" : "text-muted-foreground"
+                    isActive ? "text-blue-800" : "text-muted-foreground"
                   }`
                 }
                 end={item.to === "/"}

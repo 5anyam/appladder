@@ -73,7 +73,7 @@ const DashboardSection = () => {
               <div className="grid grid-cols-3 gap-2 text-center">
                 <div>
                   <div className="text-slate-400 text-xs">CPI</div>
-                  <div className="text-white font-semibold">$2.14</div>
+                  <div className="text-white font-semibold">$1.24</div>
                 </div>
                 <div>
                   <div className="text-slate-400 text-xs">CVR</div>

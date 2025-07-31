@@ -1,24 +1,46 @@
-import { Users, Cpu, Heart, BarChart } from "lucide-react";
+import { Users, Globe, BarChart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const solutions = [
   {
     icon: Users,
     title: "User Acquisition",
-    description: "Scale your app installs with precision targeting across premium ad networks and social platforms.",
-    features: ["Premium Ad Networks", "Social Media Campaigns", "Precision Targeting", "Cost Optimization"]
+    description: "Accelerate your app growth by acquiring quality users through data-driven campaigns and global reach.",
+    features: [
+      "Lookalike & Interest Targeting",
+      "Global & Regional Traffic",
+      "AI-Driven User Segmentation",
+      "Scalable Campaign Management"
+    ]
   },
   {
     icon: BarChart,
-    title: "Analytics Dashboard",
-    description: "Comprehensive reporting and insights to track performance, optimize campaigns, and maximize ROI.",
-    features: ["Real-time Analytics", "Custom Reports", "Attribution Tracking", "ROI Optimization"]
+    title: "Retargeting & Re-engagement",
+    description: "Boost retention and revive dormant users with event-triggered, personalized campaigns across all channels.",
+    features: [
+      "Smart Segmentation",
+      "Event-Based Triggers",
+      "Omni-channel Creative Delivery",
+      "Automated Churn Recovery"
+    ]
+  },
+  {
+    icon: Globe, // Change 'Lightbulb' to your preferred icon
+    title: "Branding",
+    description: "Build a memorable and trustworthy app identity using impactful creatives and unified brand storytelling.",
+    features: [
+      "Custom Video & Banner Assets",
+      "Influencer Collaboration",
+      "Consistent Cross-Channel Presence",
+      "Brand Safety Placement"
+    ]
   }
 ];
 
+
 const SolutionsSection = () => {
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-12 bg-muted/30">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -73,16 +95,16 @@ const SolutionsSection = () => {
         {/* Bottom Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-border">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">600+</div>
-            <div className="text-sm text-muted-foreground">Media Sources</div>
+            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">2.5M+</div>
+            <div className="text-sm text-muted-foreground">Apps Globally</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">99.9%</div>
-            <div className="text-sm text-muted-foreground">Fraud Protection</div>
+            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">104+</div>
+            <div className="text-sm text-muted-foreground">Country Reach</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">50M+</div>
-            <div className="text-sm text-muted-foreground">Monthly Installs</div>
+            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">100 Billion+ </div>
+            <div className="text-sm text-muted-foreground">Impressions/Day</div>
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">24/7</div>

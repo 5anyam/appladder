@@ -24,7 +24,7 @@ const HeroSection = () => {
         {/* Logo Icon */}
         <div className="mb-8 animate-bounce-in">
           <div className="mx-auto w-20 h-20 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-brand animate-pulse-glow hover-lift pulse-border">
-            <div className="text-3xl font-bold text-white">A</div>
+          <img className="h-full rounded-xl w-full" src="./2.jpg" alt="Appladder Logo"/>
           </div>
         </div>
 
@@ -37,14 +37,14 @@ const HeroSection = () => {
 
         {/* Subheadline */}
         <p className="text-xl md:text-2xl text-white/90 mb-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-          Advanced User Acquisition • Performance Marketing • Global Reach
+          User Acquisition • Retargeting • Global Reach
         </p>
 
         {/* Key Stats */}
         <div className="flex flex-wrap justify-center gap-8 mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
           <div className="flex items-center gap-2 text-white/80">
             <Globe className="w-5 h-5 text-blue-400" />
-            <span>600+ Media Sources</span>
+            <span>2.5M+ Apps Globally </span>
           </div>
           <div className="flex items-center gap-2 text-white/80">
             <Zap className="w-5 h-5 text-purple-400" />
@@ -62,23 +62,40 @@ const HeroSection = () => {
             Get Started
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Button>
-          <Button variant="gradient-outline" size="xl" className="group">
-            <Play className="w-5 h-5" />
-            Book a Demo
-          </Button>
         </div>
 
         {/* Trust Indicators */}
         <div className="mt-16 animate-slide-up" style={{ animationDelay: '0.8s' }}>
-          <p className="text-white/60 mb-6">Trusted by leading app publishers worldwide</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {/* Placeholder for company logos */}
-            <div className="h-8 w-24 bg-white/20 rounded"></div>
-            <div className="h-8 w-24 bg-white/20 rounded"></div>
-            <div className="h-8 w-24 bg-white/20 rounded"></div>
-            <div className="h-8 w-24 bg-white/20 rounded"></div>
-          </div>
-        </div>
+  <p className="text-white/60 mb-6">Trusted by leading app publishers worldwide</p>
+  <div className="flex flex-wrap justify-center items-center gap-8">
+    {/* Each logo: grayscale, colored on hover */}
+    <img
+      src="/amazon.png"
+      alt="Amazon"
+      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300 grayscale hover:grayscale-0 hover:opacity-100"
+      title="Ecommerce - Amazon"
+    />
+    <img
+      src="/888.png"
+      alt="888"
+      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300 grayscale hover:grayscale-0 hover:opacity-100"
+      title="Betting - 888"
+    />
+    <img
+      src="/spotify.png"
+      alt="Spotify"
+      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300 grayscale hover:grayscale-0 hover:opacity-100"
+      title="Entertainment - Spotify"
+    />
+    <img
+      src="/swiggy.png"
+      alt="Swiggy"
+      className="h-12 w-24 object-contain bg-white rounded shadow transition duration-300 grayscale hover:grayscale-0 hover:opacity-100"
+      title="Delivery - Swiggy"
+    />
+  </div>
+</div>
+
       </div>
     </section>
   );

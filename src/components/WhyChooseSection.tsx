@@ -1,4 +1,4 @@
-import { Shield, Zap, Globe, Headphones, TrendingUp, Target } from "lucide-react";
+import { Shield, Zap, Globe, Star, TrendingUp, Target } from "lucide-react";
 
 const benefits = [
   {
@@ -13,13 +13,13 @@ const benefits = [
   },
   {
     icon: Globe,
-    title: "600+ Media Sources",
+    title: "2.5M+ Apps Globally",
     description: "Access to the world's largest network of premium publishers and advertising platforms."
   },
   {
-    icon: Headphones,
-    title: "End-to-End Service",
-    description: "Dedicated account managers and 24/7 support ensure your campaigns always perform at their best."
+    icon: Star,
+    title: "Global Reach with Local Insights",
+    description: "Run campaigns in over 70 countries with support for localization, cultural adaptation, and localized optimization strategies."
   },
   {
     icon: TrendingUp,
@@ -28,14 +28,14 @@ const benefits = [
   },
   {
     icon: Target,
-    title: "Precision Targeting",
+    title: "Advance Targeting",
     description: "Advanced audience segmentation and lookalike modeling to reach your ideal users efficiently."
   }
 ];
 
 const WhyChooseSection = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-12 bg-background">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -75,35 +75,7 @@ const WhyChooseSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Trust Section */}
-        <div className="mt-20 text-center">
-          <div className="bg-gradient-primary/10 backdrop-blur-sm rounded-3xl p-12 border border-primary/20">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Trusted by <span className="gradient-text">5000+</span> App Publishers
-            </h3>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              From indie developers to Fortune 500 companies, our platform powers growth for apps across every category and vertical.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary">
-                Gaming
-              </div>
-              <div className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary">
-                E-commerce
-              </div>
-              <div className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary">
-                Finance
-              </div>
-              <div className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary">
-                Social
-              </div>
-              <div className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-primary">
-                Education
-              </div>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </section>
   );

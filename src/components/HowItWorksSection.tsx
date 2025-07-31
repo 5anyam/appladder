@@ -5,29 +5,27 @@ import { useEffect, useState } from "react";
 const steps = [
   {
     icon: Target,
-    title: "Share Your Goals",
-    description: "Tell us about your app, target audience, and growth objectives. We analyze your current performance and identify opportunities.",
+    title: "Identify a high-value, trusted audience for your app",
+    description:
+      "Provide details about your application, ideal customers, and growth goals. Our team reviews your existing data to unlock potential growth areas.",
     step: "01"
   },
   {
     icon: Lightbulb,
-    title: "We Strategize",
-    description: "Our AI-powered platform creates a custom acquisition strategy, selecting optimal channels and targeting parameters.",
+    title: "Capture and Interact users at every step of your customer journey",
+    description:
+      "Utilizing AI, we develop tailored acquisition plans to target the most effective channels and audiences.",
     step: "02"
   },
   {
     icon: Rocket,
-    title: "Campaigns Go Live",
-    description: "Your campaigns launch across 600+ media sources with real-time optimization and fraud protection built-in.",
+    title: "Boost retention through smart machine learning creatives",
+    description:
+      "Campaigns deploy on over 600 platforms with ongoing optimization and built-in fraud prevention.",
     step: "03"
-  },
-  {
-    icon: BarChart3,
-    title: "See Real-Time Results",
-    description: "Track performance with detailed analytics, receive insights, and watch your user base grow sustainably.",
-    step: "04"
   }
 ];
+
 
 const HowItWorksSection = () => {
   // For entrance animations (cards appear one by one)
@@ -60,7 +58,7 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Steps Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <Card
               key={index}
