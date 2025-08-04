@@ -9,7 +9,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Address",
-    value: "123 App Street, Tech City, USA",
+    value: "447 Broadway 2ND FL, New York, NY 10013",
     href: null
   },
   {
@@ -71,8 +71,7 @@ const ContactUsPage = () => {
       {/* Contact Info & Form Section */}
       <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto"> 
             {/* Contact Information Cards */}
             <div className="lg:col-span-1 space-y-6">
               <h2 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h2>
@@ -109,7 +108,6 @@ const ContactUsPage = () => {
                 </Card>
               ))}
             </div>
-
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <Card className="group hover:shadow-brand transition-all duration-500 bg-card/80 backdrop-blur-sm border-0 overflow-hidden">

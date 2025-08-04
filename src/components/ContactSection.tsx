@@ -172,7 +172,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="font-semibold">Visit Us</div>
-                    <div className="text-muted-foreground">San Francisco, CA</div>
+                    <div className="text-muted-foreground">447 Broadway 2ND FL, New York, NY 10013</div>
                   </div>
                 </CardContent>
               </Card>
