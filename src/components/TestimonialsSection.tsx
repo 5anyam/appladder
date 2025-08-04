@@ -1,13 +1,40 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 
+const companies = [
+  {
+    image: "/companies/mcd.png",
+    name: "McDonald's"
+  },
+  {
+    image: "/companies/noon.png",
+    name: "Noon"
+  },
+  {
+    image: "/companies/monese.png",
+    name: "Monese"
+  },
+  {
+    image: "/companies/labeb.png",
+    name: "Labeb"
+  },
+  {
+    image: "/companies/bright.png",
+    name: "Bright"
+  },
+  {
+    image: "/companies/octafx.png",
+    name: "OctaFX"
+  }
+];
+
 const testimonials = [
   {
     name: "Sarah Chen",
     title: "Growth Manager",
     company: "FitTracker Pro",
     rating: 5,
-    text: "Appladder helped us scale from 10K to 1M+ downloads in just 6 months. Their AI optimization is incredible - our CPI dropped 40% while quality improved dramatically.",
+    text: "Appladder helped us scale from 10K to 1M+ downloads in just 6 months. Their AI optimization is incredible our CPI dropped 40% while quality improved dramatically.",
     avatar: "SC"
   },
   {
@@ -45,7 +72,7 @@ const TestimonialsSection = () => {
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card 
+            <Card
               key={index}
               className="group hover:shadow-brand transition-all duration-500 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-0 relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -90,32 +117,19 @@ const TestimonialsSection = () => {
         {/* Company Logos */}
         <div className="mt-16 pt-16 border-t border-border">
           <p className="text-center text-muted-foreground mb-8">Trusted by leading companies worldwide</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
-            {/* Placeholder company logos */}
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="h-12 w-32 bg-muted rounded-lg flex items-center justify-center">
-                <div className="text-muted-foreground text-sm font-medium">Company {i + 1}</div>
-              </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            {companies.map((company, index) => (
+              <img
+                key={index}
+                src={company.image}
+                alt={company.name}
+                className="h-20 object-contain" // Height adjust kar sakte ho
+              />
             ))}
           </div>
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-primary/10 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to join our <span className="gradient-text">success stories?</span>
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Start your growth journey today and see why thousands of publishers trust Appladder.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">Start Free Trial</button>
-              <button className="btn-secondary">Schedule Demo</button>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
   );
 };

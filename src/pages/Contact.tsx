@@ -3,6 +3,28 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+const contactInfo = [
+  {
+    icon: MapPin,
+    label: "Address",
+    value: "123 App Street, Tech City, USA",
+    href: null
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+1 234 567 890",
+    href: "tel:+1234567890"
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "support@appladder.us",
+    href: "mailto:support@appladder.us"
+  }
+];
 
 const ContactUsPage = () => {
   // Simple form state
@@ -27,109 +49,154 @@ const ContactUsPage = () => {
   return (
     <>
       <Header />
-      <section className="min-h-screen bg-gray-50 pt-24 pb-16 relative">
-        {/* Decorative background shapes */}
-        <div className="hidden sm:block absolute -top-36 -left-36 w-[280px] h-[280px] bg-[#6a5afc09] rounded-full blur-2xl pointer-events-none" />
-        <div className="hidden sm:block absolute -bottom-24 -right-28 w-[220px] h-[220px] bg-[#00f0ff14] rounded-full blur-2xl pointer-events-none" />
-
-        <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-0 flex flex-col lg:flex-row gap-12">
-          {/* Left Contact Info */}
-          <div className="lg:w-1/3 space-y-8">
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Contact <span className="gradient-text">Appladder</span></h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              Have any questions or want to start growing your app with us?  
+      
+      {/* Hero Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="uppercase tracking-widest text-xs font-semibold text-primary">
+              Contact Us
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Contact <span className="gradient-text">Appladder</span>
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Have any questions or want to start growing your app with us? 
               Fill the form and our team will reach out quickly.
             </p>
-
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <MapPin className="text-[#00F0FF]" size={24} />
-                <address className="not-italic text-gray-700">123 App Street, Tech City, USA</address>
-              </div>
-              <div className="flex items-center gap-4">
-                <Phone className="text-[#00F0FF]" size={24} />
-                <a href="tel:+1234567890" className="text-gray-700 hover:text-[#3a3ad9] transition">+1 234 567 890</a>
-              </div>
-              <div className="flex items-center gap-4">
-                <Mail className="text-[#00F0FF]" size={24} />
-                <a href="mailto:support@appladder.us" className="text-gray-700 hover:text-[#3a3ad9] transition">support@appladder.us</a>
-              </div>
-            </div>
           </div>
-
-          {/* Right Contact Form */}
-          <form
-            className="lg:w-2/3 bg-white rounded-2xl p-8 shadow-xl border border-gray-200"
-            onSubmit={handleSubmit}
-          >
-            {submitted ? (
-              <div className="text-center p-6">
-                <h3 className="text-2xl font-bold text-[#3a3ad9] mb-4">Thank you!</h3>
-                <p className="text-gray-700">Your message has been sent. We will get back to you soon.</p>
-                <Button
-                  variant="outline"
-                  className="mt-6"
-                  onClick={() => {
-                    setSubmitted(false);
-                    setForm({ name: "", email: "", subject: "", message: "" });
-                  }}
-                >
-                  Send Another Message
-                </Button>
-              </div>
-            ) : (
-              <>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name*"
-                    className="border border-gray-300 rounded-lg p-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#3a3ad9]"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email*"
-                    className="border border-gray-300 rounded-lg p-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#3a3ad9]"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject*"
-                  className="w-full border border-gray-300 rounded-lg p-3 text-gray-800 mb-6 focus:outline-none focus:ring-2 focus:ring-[#3a3ad9]"
-                  value={form.subject}
-                  onChange={handleChange}
-                  required
-                />
-                <textarea
-                  name="message"
-                  placeholder="Your Message*"
-                  rows={6}
-                  className="w-full border border-gray-300 rounded-lg p-3 text-gray-800 mb-6 resize-none focus:outline-none focus:ring-2 focus:ring-[#3a3ad9]"
-                  value={form.message}
-                  onChange={handleChange}
-                  required
-                ></textarea>
-
-                <Button
-                  type="submit"
-                  className="flex items-center justify-center gap-2 px-8 py-3 bg-[#00F0FF] text-[#242878] font-bold rounded-full shadow hover:bg-[#3a3ad9] hover:text-white transition"
-                  size="lg"
-                >
-                  Send Message <Send size={20} />
-                </Button>
-              </>
-            )}
-          </form>
         </div>
       </section>
+
+      {/* Contact Info & Form Section */}
+      <section className="py-12 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            {/* Contact Information Cards */}
+            <div className="lg:col-span-1 space-y-6">
+              <h2 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h2>
+              {contactInfo.map((info, index) => (
+                <Card 
+                  key={info.label}
+                  className="group hover:shadow-brand transition-all duration-300 bg-card/80 backdrop-blur-sm border-0"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300">
+                        <info.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-1">{info.label}</h3>
+                        {info.href ? (
+                          <a 
+                            href={info.href} 
+                            className="text-muted-foreground hover:text-primary transition-colors"
+                          >
+                            {info.value}
+                          </a>
+                        ) : (
+                          <address className="not-italic text-muted-foreground">
+                            {info.value}
+                          </address>
+                        )}
+                      </div>
+                    </div>
+                    {/* Hover Effect Overlay */}
+                    <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Contact Form */}
+            <div className="lg:col-span-2">
+              <Card className="group hover:shadow-brand transition-all duration-500 bg-card/80 backdrop-blur-sm border-0 overflow-hidden">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-bold text-foreground">
+                    Send us a Message
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <form onSubmit={handleSubmit}>
+                    {submitted ? (
+                      <div className="text-center p-6">
+                        <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Send className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-primary mb-4">Thank you!</h3>
+                        <p className="text-muted-foreground mb-6">Your message has been sent. We will get back to you soon.</p>
+                        <Button
+                          variant="outline"
+                          className="btn-secondary"
+                          onClick={() => {
+                            setSubmitted(false);
+                            setForm({ name: "", email: "", subject: "", message: "" });
+                          }}
+                        >
+                          Send Another Message
+                        </Button>
+                      </div>
+                    ) : (
+                      <div className="space-y-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name*"
+                            className="border border-border rounded-lg p-3 text-foreground bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                            value={form.name}
+                            onChange={handleChange}
+                            required
+                          />
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Your Email*"
+                            className="border border-border rounded-lg p-3 text-foreground bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                            value={form.email}
+                            onChange={handleChange}
+                            required
+                          />
+                        </div>
+                        <input
+                          type="text"
+                          name="subject"
+                          placeholder="Subject*"
+                          className="w-full border border-border rounded-lg p-3 text-foreground bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                          value={form.subject}
+                          onChange={handleChange}
+                          required
+                        />
+                        <textarea
+                          name="message"
+                          placeholder="Your Message*"
+                          rows={6}
+                          className="w-full border border-border rounded-lg p-3 text-foreground bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                          value={form.message}
+                          onChange={handleChange}
+                          required
+                        />
+                        <Button
+                          type="submit"
+                          className="w-full sm:w-auto btn-primary flex items-center justify-center gap-2"
+                          size="lg"
+                        >
+                          Send Message <Send size={20} />
+                        </Button>
+                      </div>
+                    )}
+                  </form>
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

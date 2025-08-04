@@ -186,7 +186,7 @@ const Footer = () => {
         <div className="py-8 border-t border-slate-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-slate-400 text-sm select-none">
-              © 2024 Appladder. All rights reserved.
+              © 2025 Appladder. All rights reserved.
             </div>
             <div className="flex gap-6 text-sm">
               <Link

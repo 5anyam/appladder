@@ -21,7 +21,7 @@ const steps = [
     icon: Rocket,
     title: "Boost retention through smart machine learning creatives",
     description:
-      "Campaigns deploy on over 600 platforms with ongoing optimization and built-in fraud prevention.",
+      "Campaigns deploy on various platforms with ongoing optimization and built-in fraud prevention.",
     step: "03"
   }
 ];

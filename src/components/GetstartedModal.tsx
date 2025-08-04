@@ -2,27 +2,24 @@
 import React, { useState } from "react";
 import Modal from "./Modal"; // adjust the import path as needed
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const BrandLogo: React.FC = () => (
   <div className="flex items-center gap-2">
-    <div className="w-10 h-10 rounded-lg bg-[#00F0FF] flex justify-center items-center font-bold text-2xl text-[#3a3ad9] shadow-brand">
-      A
-    </div>
-    <span className="text-xl font-bold text-[#242878]">App Ladder</span>
+    <img src="/logo.jpg" alt="appladder-logo" />
   </div>
 );
 
-const ExampleWithModalButton: React.FC = () => {
+const GetstartedModalButton: React.FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <button
-        className="px-8 py-3 rounded-full bg-blue-700 text-white font-bold shadow hover:bg-[#3a3ad9] hover:text-white transition"
+      <Button size="lg" className="btn-primary"
         onClick={() => setOpen(true)}
       >
-        Get Started
-      </button>
+        GET STARTED WITH APPLADDER
+      </Button>
       <Modal open={open} onClose={() => setOpen(false)}>
         {/* Modal Header */}
         <div className="flex items-center justify-between px-7 pt-6 pb-3 border-b border-gray-100 bg-gray-50">
@@ -88,4 +85,4 @@ const ExampleWithModalButton: React.FC = () => {
   );
 };
 
-export { Modal, ExampleWithModalButton };
+export { Modal, GetstartedModalButton };

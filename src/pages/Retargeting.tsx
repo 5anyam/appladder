@@ -1,8 +1,10 @@
 import { RefreshCw, Users, Bell, Link2, Activity, ArrowRight, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { GetstartedModalButton } from "@/components/GetstartedModal";
 
 // Value Props
 const ValueHighlights = [
@@ -61,7 +63,7 @@ const steps = [
   {
     icon: Link2,
     title: "Redirect & Measure",
-    desc: "Send users to the perfect in-app spot via deep linking and see reactivations in real-time dashboards.",
+    desc: "Send users to the perfect in-app spot via deep linking and see reactivations.",
     num: "04",
   },
 ];
@@ -78,136 +80,204 @@ const faqs = [
   },
   {
     q: "Which channels do you support?",
-    a: "We support in-app notifications, push, dynamic ads (across networks), and even email/SMS as required.",
+    a: "We support in-app notifications, push, dynamic ads (across networks) as required.",
   },
   {
     q: "Can I use this for churned users from months ago?",
-    a: "Yes! Bring back users after weeks or months with personalized incentives—they don’t need to be recent drop-offs.",
+    a: "Yes! Bring back users after weeks or months with personalized incentives—they don't need to be recent drop-offs.",
   },
   {
     q: "How do I track ROI from re-engagement?",
-    a: "Your dashboard shows real-time attribution: see reactivations, conversions, boosted retention, and ARPU uplift right as it happens.",
+    a: "At AppLadder we track re-engagement ROI by measuring revenue from users who return after seeing ads. Using MMPs, we attribute post-engagement actions like purchases or subscriptions to specific campaigns. ROI is calculated by comparing that attributed revenue against re-engagement ad spend.",
   },
 ];
 
 const RetargetingReEngagementPage = () => {
-  const [openFAQ, setOpenFAQ] = useState(null);
+  const [openFAQ, setOpenFAQ] = useState<null | number>(null);
 
   return (
     <>
       <Header />
-      <section className="min-h-screen bg-gray-50 pt-20 pb-10 relative">
-        {/* Decorative BG */}
-        <div className="hidden sm:block absolute -top-32 -left-32 w-[220px] h-[220px] bg-[#6a5afc09] rounded-full blur-2xl" />
-        <div className="hidden sm:block absolute -bottom-10 -right-24 w-[120px] h-[120px] bg-[#00f0ff14] rounded-full blur-2xl" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-          {/* Header */}
-          <div className="max-w-2xl mx-auto mb-10 text-center px-2">
-            <span className="uppercase tracking-widest text-xs font-semibold text-[#3a3ad9] block mb-2">Retargeting & Re-engagement</span>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-4 leading-tight break-words">
-              Turn One-Time Installs Into Long-Term Revenue
+      
+      {/* Hero Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="uppercase tracking-widest text-xs font-semibold text-primary">
+              Retargeting & Re-engagement
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Turn One-Time Installs Into
+              <br />
+              <span className="gradient-text">Long-Term Revenue</span>
             </h1>
-            <p className="text-gray-700/90 text-base sm:text-lg md:text-xl mb-7">
-              Not every new user means value.<br className="hidden sm:block" /> 
-              Our smart Retargeting engine identifies <b>dormant, churned, or distracted users</b> and brings them back—at the perfect moment—with engaging, personalized campaigns that drive repeat action.
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Not every new user means value. Our smart Retargeting engine identifies <b>dormant, churned, or distracted users</b> and brings them back—at the perfect moment—with engaging, personalized campaigns that drive repeat action.
             </p>
-            <Button
-              size="lg"
-              className="w-full sm:w-auto px-6 py-3 md:px-9 md:py-4 rounded-full text-base sm:text-lg font-bold shadow-brand bg-[#3a3ad9] text-white hover:bg-[#00F0FF] hover:text-[#242878] transition"
-            >
-              Request a Free Retargeting Audit
-            </Button>
-          </div>
-          
-          {/* Value Highlights */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto mt-4 mb-16">
-            {ValueHighlights.map((vh, idx) => (
-              <div
-                key={vh.title}
-                className="card-white flex flex-col items-center text-center p-6 md:p-7 rounded-xl sm:rounded-2xl shadow-brand border border-gray-200 transition-transform duration-300 hover:-translate-y-2 hover:shadow-glow animate-fade-in-up"
-                style={{ animationDelay: `${0.12 + idx * 0.07}s` }}
-              >
-                <div className="mb-4 w-12 h-12 sm:w-14 sm:h-14 bg-[#3a3ad9] rounded-xl flex items-center justify-center shadow-glow animate-pulse-glow">
-                  <vh.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="font-semibold text-base md:text-lg text-gray-950 mb-1">{vh.title}</h3>
-                <p className="text-gray-600 text-sm md:text-base">{vh.text}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* How it Works */}
-          <div className="max-w-5xl mx-auto text-center my-14 sm:my-20">
-            <h2 className="text-2xl md:text-3xl font-bold mb-5">
-              How <span className="gradient-text">Retargeting & Re-engagement</span> Works
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600 mb-10 max-w-2xl mx-auto">
-              Our platform brings your best users back at scale—using data, personalization, and live feedback. Here’s the journey:
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {steps.map((step, idx) => (
-                <div
-                  key={step.num}
-                  className="card-white flex flex-col items-center text-center p-6 md:p-7 rounded-xl sm:rounded-2xl border border-gray-200 shadow-brand transition-transform duration-300 hover:-translate-y-2 hover:shadow-glow animate-fade-in-up"
-                  style={{ animationDelay: `${0.18 + idx * 0.09}s` }}
-                >
-                  <div className="mb-4 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#00F0FF] flex items-center justify-center text-[#3a3ad9] font-bold text-lg shadow-glow">
-                    <step.icon className="w-7 h-7" />
-                  </div>
-                  <div className="mb-1 text-xs sm:text-sm font-semibold text-[#3a3ad9] tracking-widest">{step.num}</div>
-                  <div className="font-semibold text-base sm:text-lg text-gray-950 mb-1">{step.title}</div>
-                  <div className="text-gray-600 text-xs sm:text-sm">{step.desc}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Feature Details */}
-          <div className="max-w-3xl mx-auto my-14 sm:my-20 card-white shadow-brand border border-gray-200 rounded-2xl md:rounded-3xl py-8 sm:py-12 px-4 sm:px-8 text-center animate-fade-in-up">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Why Brands Love Appladder Re-engagement</h2>
-            <ul className="text-gray-700/80 text-sm sm:text-base text-left space-y-2 sm:space-y-3 max-w-lg mx-auto list-disc list-inside">
-              <li>Smart segmentation: Automatically find and reach every valuable user segment.</li>
-              <li>Personalized offers trigger up to 4x more conversions than generic reactivation ads.</li>
-              <li>Deep linking delivers seamless user journeys, not just app opens.</li>
-              <li>Real-time ROI measurement—no more blind spend.</li>
-              <li>Scale winning audiences and creative on autopilot.</li>
-            </ul>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="max-w-2xl mx-auto my-14 sm:my-20">
-            <h2 className="text-xl sm:text-2xl font-bold mb-5 text-gray-900 text-center">Frequently Asked Questions</h2>
-            <div className="space-y-4 sm:space-y-5">
-              {faqs.map((faq, idx) => (
-                <div key={idx} className="card-white p-4 sm:p-6 rounded-lg sm:rounded-xl border border-gray-200 shadow flex flex-col transition-all duration-150">
-                  <div
-                    className="cursor-pointer text-left flex items-center justify-between"
-                    onClick={() => setOpenFAQ(openFAQ === idx ? null : idx)}
-                  >
-                    <span className="font-medium text-gray-950 text-base sm:text-lg">{faq.q}</span>
-                    <span className="ml-3 transition-transform" style={{transform: openFAQ === idx ? "rotate(90deg)" : "rotate(0deg)"}}>▶</span>
-                  </div>
-                  {openFAQ === idx && (
-                    <div className="mt-3 text-gray-600 border-t pt-3 text-sm sm:text-base">{faq.a}</div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Final CTA */}
-          <div className="mt-12 sm:mt-20 text-center animate-fade-in-up">
-            <Button
-              size="lg"
-              className="w-full sm:w-auto px-7 py-3 md:px-10 md:py-4 rounded-full text-base sm:text-lg font-bold shadow-brand bg-[#00F0FF] text-[#242878] hover:bg-[#3a3ad9] hover:text-white transition"
-            >
-              Start Re-engaging Your Best Users
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <GetstartedModalButton/>
           </div>
         </div>
       </section>
+
+      {/* Value Highlights Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-6">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Our <span className="gradient-text">Re-engagement Features</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Advanced retargeting solutions designed to bring back your most valuable users
+            </p>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ValueHighlights.map((vh, index) => (
+              <Card 
+                key={vh.title}
+                className="group hover:shadow-brand transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 bg-card/80 backdrop-blur-sm border-0 overflow-hidden animate-fade-in-up hover-lift"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <CardHeader className="pb-4">
+                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300 mb-4">
+                    <vh.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <CardTitle className="text-lg font-bold text-foreground">
+                    {vh.title}
+                  </CardTitle>
+                </CardHeader>
+
+                <CardContent className="pt-0">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {vh.text}
+                  </p>
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How it Works Section */}
+      <section className="py-12 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              How <span className="gradient-text">Retargeting & Re-engagement</span> Works
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Our platform brings your best users back at scale—using data, personalization, and live feedback
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {steps.map((step, index) => (
+              <Card 
+                key={step.num}
+                className="group hover:shadow-brand transition-all duration-500 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-0 relative overflow-hidden animate-fade-in-up"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300">
+                      <step.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <div className="text-xs font-semibold text-primary tracking-widest">
+                      {step.num}
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl font-bold text-foreground">
+                    {step.title}
+                  </CardTitle>
+                </CardHeader>
+
+                <CardContent className="pt-0">
+                  <p className="text-muted-foreground leading-relaxed">
+                    {step.desc}
+                  </p>
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Brands Love Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <Card className="group hover:shadow-brand transition-all duration-500 bg-card/80 backdrop-blur-sm border-0 overflow-hidden">
+              <CardHeader className="text-center">
+                <CardTitle className="text-3xl md:text-4xl font-bold text-foreground">
+                  Why Brands Love <span className="gradient-text">Re-engagement</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="text-muted-foreground text-base leading-relaxed space-y-3 max-w-2xl mx-auto list-disc list-inside">
+                  <li>Smart segmentation: Automatically find and reach every valuable user segment.</li>
+                  <li>Personalized offers trigger up to 4x more conversions than generic reactivation ads.</li>
+                  <li>Deep linking delivers seamless user journeys, not just app opens.</li>
+                  <li>Real-time ROI measurement—no more blind spend.</li>
+                  <li>Scale winning audiences and creative on autopilot.</li>
+                </ul>
+                {/* Hover Effect Overlay */}
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="gradient-text">Frequently Asked</span> Questions
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Common questions about our retargeting and re-engagement solutions
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqs.map((faq, idx) => (
+              <Card
+                key={idx}
+                className="group hover:shadow-brand transition-all duration-300 bg-card/80 backdrop-blur-sm border-0"
+              >
+                <CardContent className="p-6">
+                  <button
+                    type="button"
+                    className="flex items-center justify-between w-full text-left"
+                    onClick={() => setOpenFAQ(openFAQ === idx ? null : idx)}
+                  >
+                    <span className="font-semibold text-foreground text-lg">{faq.q}</span>
+                    <span
+                      className="ml-3 text-primary transition-transform"
+                      style={{ transform: openFAQ === idx ? "rotate(90deg)" : "rotate(0deg)" }}
+                    >
+                      ▶
+                    </span>
+                  </button>
+                  {openFAQ === idx && (
+                    <div className="mt-4 text-muted-foreground border-t pt-4 leading-relaxed">
+                      {faq.a}
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import heroImage from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
+    <>
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
@@ -40,21 +41,6 @@ const HeroSection = () => {
           User Acquisition • Retargeting • Global Reach
         </p>
 
-        {/* Key Stats */}
-        <div className="flex flex-wrap justify-center gap-8 mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-          <div className="flex items-center gap-2 text-white/80">
-            <Globe className="w-5 h-5 text-blue-400" />
-            <span>2.5M+ Apps Globally </span>
-          </div>
-          <div className="flex items-center gap-2 text-white/80">
-            <Zap className="w-5 h-5 text-purple-400" />
-            <span>AI-Powered Optimization</span>
-          </div>
-          <div className="flex items-center gap-2 text-white/80">
-            <TrendingUp className="w-5 h-5 text-violet-400" />
-            <span>Fraud-Free Results</span>
-          </div>
-        </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.6s' }}>
@@ -98,6 +84,25 @@ const HeroSection = () => {
 
       </div>
     </section>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-4 p-4">
+    <div className="text-center">
+      <div className="text-3xl md:text-5xl font-bold gradient-text mb-2">2.5M+</div>
+      <div className="text-base text-muted-foreground">Apps Globally</div>
+    </div>
+    <div className="text-center">
+      <div className="text-3xl md:text-5xl font-bold gradient-text mb-2">104+</div>
+      <div className="text-base text-muted-foreground">Countries</div>
+    </div>
+    <div className="text-center">
+      <div className="text-3xl md:text-5xl font-bold gradient-text mb-2">100 Billion+ </div>
+      <div className="text-base text-muted-foreground">Impressions/Day</div>
+    </div>
+    <div className="text-center">
+      <div className="text-3xl md:text-5xl font-bold gradient-text mb-2">100+</div>
+      <div className="text-base text-muted-foreground">Global Brands</div>
+    </div>
+  </div>
+  </>
   );
 };
 

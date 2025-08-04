@@ -1,7 +1,9 @@
-import { RefreshCw, Zap, PenTool, Cpu} from "lucide-react";
+import { RefreshCw, Zap, PenTool, Cpu } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { GetstartedModalButton } from "@/components/GetstartedModal";
 
 const services = [
   {
@@ -20,118 +22,153 @@ const services = [
     icon: PenTool,
     title: "Branding",
     desc:
-      "First impressions matter! We elevate your app’s identity through custom design, cross-channel creative, influencer and video strategy — ensuring users remember, trust, and love your brand.",
+      "First impressions matter! We elevate your app's identity through custom design, cross-channel creative, influencer and video strategy — ensuring users remember, trust, and love your brand.",
   },
   {
     icon: Cpu,
-    title: "Programmatic UA",
+    title: "Programmatic Buying",
     desc:
       "Our real-time DSP uses advanced algorithms for smarter, automated ad buying — reaching 600+ exchanges/partners, optimizing spend and creative, and guaranteeing fraud-free, high-quality growth.",
   },
+];
+
+const values = [
+  "Always innovating to stay ahead of the curve",
+  "Transparent & honest communication, no hidden agendas",
+  "Global expertise with local market understanding",
+  "Creativity that connects brands and users meaningfully",
+  "Data-driven decisions that power continuous improvement"
 ];
 
 const AboutUsPage = () => {
   return (
     <>
       <Header />
-      <section className="min-h-screen bg-gray-50 pt-24 pb-16 relative">
-        {/* Decorative BG */}
-        <div className="hidden sm:block absolute -top-32 -left-32 w-[220px] h-[220px] bg-[#6a5afc09] rounded-full blur-2xl" />
-        <div className="hidden sm:block absolute -bottom-16 -right-24 w-[140px] h-[140px] bg-[#00f0ff14] rounded-full blur-2xl" />
-
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-7 lg:px-0">
-          {/* About Header */}
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="uppercase tracking-widest text-xs font-semibold text-[#3a3ad9] block mb-2">
+      
+      {/* Hero Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="uppercase tracking-widest text-xs font-semibold text-primary">
               About Appladder
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
-              We <span className="gradient-text">Elevate App Growth</span><br /> with Data, Creativity, & Tech
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+              We <span className="gradient-text">Elevate App Growth</span>
+              <br /> with Data, Creativity, & Tech
             </h1>
-            <p className="text-gray-700/90 text-base sm:text-lg md:text-xl mb-7">
-              Appladder turns every mobile app’s growth goal into reality — blending smart data, creative science, and
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              Appladder turns every mobile app's growth goal into reality and blending smart data, creative science, and
               cutting-edge tech. From quality user acquisition to lasting engagement, we help you scale, succeed, and build a brand people love.
             </p>
-            <Button
-              size="lg"
-              className="w-full sm:w-auto px-7 py-3 md:px-10 md:py-4 rounded-full text-base sm:text-lg font-bold shadow-brand bg-[#00F0FF] text-[#242878] hover:bg-[#3a3ad9] hover:text-white transition"
-            >
-              Partner With Us
-            </Button>
-          </div>
-
-          {/* Values/Mission */}
-          <div className="card-white rounded-2xl px-8 py-10 shadow-brand border border-gray-200 mb-12 max-w-3xl mx-auto text-center animate-fade-in-up">
-  <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
-  <p className="text-gray-800 text-base sm:text-lg mb-6 leading-relaxed max-w-xl mx-auto">
-    At Appladder, we’re passionate about helping app founders and marketers achieve sustainable growth.  
-    We combine deep data insights with creative strategies to deliver real users who stick around — driving value beyond just installs.  
-    Honest results, clear communication, and long-term partnerships are at the heart of everything we do.
-  </p>
-  <div className="flex flex-wrap justify-center gap-6 mt-6 text-[#3a3ad9] font-semibold">
-    <div className="flex items-center gap-2 bg-[#e0e7ff] text-[#3a3ad9] rounded-full px-4 py-2 shadow-sm select-none">
-      <span className="text-xl">🚀</span> Always innovating to stay ahead of the curve
-    </div>
-    <div className="flex items-center gap-2 bg-[#e0e7ff] text-[#3a3ad9] rounded-full px-4 py-2 shadow-sm select-none">
-      <span className="text-xl">🤝</span> Transparent & honest communication — no hidden agendas
-    </div>
-    <div className="flex items-center gap-2 bg-[#e0e7ff] text-[#3a3ad9] rounded-full px-4 py-2 shadow-sm select-none">
-      <span className="text-xl">🌍</span> Global expertise with local market understanding
-    </div>
-    <div className="flex items-center gap-2 bg-[#e0e7ff] text-[#3a3ad9] rounded-full px-4 py-2 shadow-sm select-none">
-      <span className="text-xl">🎨</span> Creativity that connects brands and users meaningfully
-    </div>
-    <div className="flex items-center gap-2 bg-[#e0e7ff] text-[#3a3ad9] rounded-full px-4 py-2 shadow-sm select-none">
-      <span className="text-xl">📈</span> Data-driven decisions that power continuous improvement
-    </div>
-  </div>
-</div>
-
-
-          {/* Core Services */}
-          <h2 className="text-2xl sm:text-3xl font-bold mb-7 text-center text-gray-900">What We Do</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
-            {services.map((srv, idx) => (
-              <div
-                key={srv.title}
-                className="card-white flex flex-col items-center text-center p-7 rounded-2xl shadow-brand border border-gray-200 transition-transform duration-300 hover:-translate-y-2 hover:shadow-glow animate-fade-in-up"
-                style={{ animationDelay: `${0.14 + idx * 0.07}s` }}
-              >
-                <div className="mb-4 w-14 h-14 bg-[#00F0FF] rounded-xl flex items-center justify-center shadow-glow animate-pulse-glow">
-                  <srv.icon className="w-7 h-7 text-[#242878]" />
-                </div>
-                <h3 className="font-semibold text-lg text-gray-950 mb-1">{srv.title}</h3>
-                <p className="text-gray-600 text-sm">{srv.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Why us */}
-          <div className="card-white rounded-2xl px-6 py-8 shadow-brand border border-gray-200 mb-16 max-w-3xl mx-auto text-center animate-fade-in-up">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-              Why Global Brands Choose <span className="gradient-text">Appladder?</span>
-            </h2>
-            <ul className="text-gray-700 text-base text-left space-y-3 max-w-lg mx-auto list-disc list-inside">
-              <li>⚡️ Fast Onboarding — get campaigns live in <b>under 48 hours</b></li>
-              <li>🔍 Advanced fraud protection & real-time analytics 
-              </li>
-              <li>🎨 Creative studio, influencer & video inside your dashboard</li>
-              <li>🌐 600+ global traffic partners, all managed via a single platform</li>
-              <li>💬 Friendly, expert support Team — always there, never bots</li>
-            </ul>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-10 animate-fade-in-up">
-            <Button
-              size="lg"
-              className="w-full sm:w-auto px-7 py-3 md:px-10 md:py-4 rounded-full text-base sm:text-lg font-bold shadow-brand bg-[#3a3ad9] text-white hover:bg-[#00F0FF] hover:text-[#242878] transition"
-            >
-              Meet Our Team
-            </Button>
+            <GetstartedModalButton/>
           </div>
         </div>
       </section>
+
+      {/* Mission Section */}
+      <section className="py-12 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <Card className="group hover:shadow-brand transition-all duration-500 bg-card/80 backdrop-blur-sm border-0 overflow-hidden">
+              <CardHeader className="text-center">
+                <CardTitle className="text-3xl font-bold text-foreground">Our Mission</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground text-lg mb-8 leading-relaxed max-w-2xl mx-auto text-center">
+                  At Appladder, we're passionate about helping app founders and marketers achieve sustainable growth.
+                  We combine deep data insights with creative strategies to deliver real users who stick around, driving value beyond just installs.
+                  Honest results, clear communication, and long-term partnerships are at the heart of everything we do.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {values.map((value, index) => (
+                    <div
+                      key={index}
+                      className="bg-gradient-primary/10 text-primary rounded-full px-4 py-2 shadow-sm select-none text-sm font-medium"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      {value}
+                    </div>
+                  ))}
+                </div>
+                {/* Hover Effect Overlay */}
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-6">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              What <span className="gradient-text">We Do</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive mobile marketing solutions designed to accelerate your app's growth
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {services.map((service, index) => (
+              <Card 
+                key={service.title}
+                className="group hover:shadow-brand transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 bg-card/80 backdrop-blur-sm border-0 overflow-hidden animate-fade-in-up hover-lift"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300">
+                      <service.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <CardTitle className="text-xl font-bold text-foreground">
+                      {service.title}
+                    </CardTitle>
+                  </div>
+                </CardHeader>
+
+                <CardContent className="pt-0">
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.desc}
+                  </p>
+                  {/* Hover Effect Overlay */}
+                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-12 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <Card className="group hover:shadow-brand transition-all duration-500 bg-card/80 backdrop-blur-sm border-0 overflow-hidden">
+              <CardHeader className="text-center">
+                <CardTitle className="text-3xl font-bold text-foreground">
+                  Why Choose <span className="gradient-text">Appladder?</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="text-muted-foreground text-base leading-relaxed space-y-3 max-w-2xl mx-auto list-disc list-inside">
+                  <li>Fast Onboarding, get campaigns live in <b>under 48 hours</b></li>
+                  <li>Advanced fraud protection & real-time analytics</li>
+                  <li>Creative studio, influencer & video inside your dashboard</li>
+                  <li>600+ global traffic partners, all managed via a single platform</li>
+                  <li>Friendly, expert support Team, always there, never bots</li>
+                </ul>
+                {/* Hover Effect Overlay */}
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

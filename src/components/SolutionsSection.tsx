@@ -40,7 +40,7 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section className="py-12 bg-muted/30">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -90,26 +90,6 @@ const SolutionsSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Bottom Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-border">
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">2.5M+</div>
-            <div className="text-sm text-muted-foreground">Apps Globally</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">104+</div>
-            <div className="text-sm text-muted-foreground">Countries</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">100 Billion+ </div>
-            <div className="text-sm text-muted-foreground">Impressions/Day</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">50+</div>
-            <div className="text-sm text-muted-foreground">Exchanges</div>
-          </div>
         </div>
       </div>
     </section>
