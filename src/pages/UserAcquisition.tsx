@@ -13,7 +13,6 @@ import {
   Lightbulb,
   Rocket
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
 import Header from "@/components/Header";
@@ -95,24 +94,20 @@ const steps = [
 // Merged FAQs
 const faqs = [
   {
-    q: "How do you combine manual UA and programmatic DSP?",
-    a: "Appladder unifies classic user acquisition and DSP-based programmatic buying: you get best-in-class targeting and AI bidding."
-  },
-  {
     q: "How quickly can I launch and see results?",
     a: "Setup is quick! Most apps go live in under 48 hours; analytics and optimizations are live from day one."
   },
   {
     q: "Can I upload and optimize my own creatives?",
-    a: "Yes, upload banners, videos, and playables—our system runs continuous tests and shifts traffic to what converts best."
+    a: "Yes, upload banners, videos and playables, our system runs continuous tests and shifts traffic to what converts best."
   },
   {
     q: "How does fraud protection and brand safety work?",
-    a: "Multi-layered verification, trusted supply, manual and algorithmic checks ensure only real users and safe brand placement—always."
+    a: "Multi-layered verification, trusted supply, manual and algorithmic checks ensure only real users and safe brand placement always."
   },
   {
     q: "What kind of reporting and transparency can I expect?",
-    a: "You'll access full-funnel, real-time analytics (installs, LTV, ROAS, events) in your reports no hidden costs or numbers, ever."
+    a: "You'll access full funnel, real-time analytics (installs, LTV, ROAS, events) in your reports no hidden costs or numbers, ever."
   }
 ];
 
@@ -238,7 +233,7 @@ const AcquisitionPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="gradient-text">Frequently Asked</span> Questions
+              <span className="gradient-text py-4">Frequently Asked</span> Questions
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Common questions about our acquisition platform and services

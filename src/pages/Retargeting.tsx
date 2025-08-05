@@ -11,7 +11,7 @@ const ValueHighlights = [
   {
     icon: Users,
     title: "Smart Segmentation",
-    text: "Identify and group dormant users, high-value churners, and custom audiences for precision re-engagement.",
+    text: "Identify and group dormant users, high value churners, and custom audiences for precision re-engagement.",
   },
   {
     icon: Tag,
@@ -26,7 +26,7 @@ const ValueHighlights = [
   {
     icon: Bell,
     title: "Event-Based Triggers",
-    text: "Trigger retargeting based on key actions—like app open, cart abandon, level completion, and more.",
+    text: "Trigger retargeting based on key actions like app open, cart abandon, level completion and more.",
   },
   {
     icon: Activity,
@@ -45,7 +45,7 @@ const steps = [
   {
     icon: Users,
     title: "Segment",
-    desc: "Automatically identify inactive users, cart abandoners, and valuable churned audiences.",
+    desc: "Automatically identify inactive users, cart abandoners and valuable churned audiences.",
     num: "01",
   },
   {
@@ -72,7 +72,7 @@ const steps = [
 const faqs = [
   {
     q: "What makes your retargeting different from basic push or email?",
-    a: "We build truly smart, personalized campaigns using deep segmentation, in-app events, and real-time triggers—not just generic blasts. Your users get exactly what matters, when it matters.",
+    a: "We build truly smart, personalized campaigns using deep segmentation, in-app events, and real time triggers not just generic blasts. Your users get exactly what matters, when it matters.",
   },
   {
     q: "Is your engine privacy conscious?",
@@ -84,11 +84,11 @@ const faqs = [
   },
   {
     q: "Can I use this for churned users from months ago?",
-    a: "Yes! Bring back users after weeks or months with personalized incentives—they don't need to be recent drop-offs.",
+    a: "Yes! Bring back users after weeks or months with personalized incentives they don't need to be recent drop offs.",
   },
   {
     q: "How do I track ROI from re-engagement?",
-    a: "At AppLadder we track re-engagement ROI by measuring revenue from users who return after seeing ads. Using MMPs, we attribute post-engagement actions like purchases or subscriptions to specific campaigns. ROI is calculated by comparing that attributed revenue against re-engagement ad spend.",
+    a: "At AppLadder we track re-engagement ROI by measuring revenue from users who return after seeing ads. Using MMPs, we attribute post engagement actions like purchases or subscriptions to specific campaigns. ROI is calculated by comparing that attributed revenue against re-engagement ad spend.",
   },
 ];
 
@@ -239,7 +239,7 @@ const RetargetingReEngagementPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="gradient-text">Frequently Asked</span> Questions
+              <span className="gradient-text py-4">Frequently Asked</span> Questions
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Common questions about our retargeting and re-engagement solutions

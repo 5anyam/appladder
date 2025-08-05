@@ -202,7 +202,7 @@ const BrandingPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="gradient-text">Frequently Asked</span> Questions
+              <span className="gradient-text py-4">Frequently Asked</span> Questions
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Common questions about our branding services and solutions
