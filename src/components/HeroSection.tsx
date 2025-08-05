@@ -51,7 +51,7 @@ const HeroSection = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-16 animate-slide-up" style={{ animationDelay: '0.8s' }}>
+        <div className="mt-16 pb-6 animate-slide-up" style={{ animationDelay: '0.8s' }}>
   <p className="text-white/60 mb-6">Trusted by leading app publishers worldwide</p>
   <div className="flex flex-wrap justify-center items-center gap-8">
     {/* Each logo: grayscale, colored on hover */}
@@ -84,29 +84,32 @@ const HeroSection = () => {
 
       </div>
     </section>
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 m-20">
-  {[
-    { number: "2.5M+", label: "Apps Globally" },
-    { number: "104+", label: "Countries" },
-    { number: "100B+", label: "Impressions/Day" },
-    { number: "100+", label: "Global Brands" },
-  ].map((stat, index) => (
-    <div
-      key={stat.label}
-      className="group bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-6 sm:p-8 text-center transition-all duration-500 hover:shadow-brand hover:-translate-y-2 animate-fade-in-up"
-      style={{ animationDelay: `${index * 150}ms` }}
-    >
-      <div className="text-3xl sm:text-4xl lg:text-5xl font-black gradient-text mb-3 group-hover:scale-110 transition-transform duration-300">
-        {stat.number}
+    <div className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
+    {[
+      { number: "2.5M+", label: "Apps Globally" },
+      { number: "104+", label: "Countries" },
+      { number: "100B+", label: "Impressions/Day" },
+      { number: "100+", label: "Global Brands" },
+    ].map((stat, index) => (
+      <div
+        key={stat.label}
+        className="group bg-card/80 backdrop-blur-sm border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 text-center transition-all duration-500 hover:shadow-brand hover:-translate-y-2 animate-fade-in-up relative overflow-hidden"
+        style={{ animationDelay: `${index * 150}ms` }}
+      >
+        <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black gradient-text mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
+          {stat.number}
+        </div>
+        <div className="text-xs sm:text-sm lg:text-base text-muted-foreground font-medium leading-tight">
+          {stat.label}
+        </div>
+        {/* Subtle hover effect */}
+        <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 rounded-xl sm:rounded-2xl transition-opacity duration-300"></div>
       </div>
-      <div className="text-sm sm:text-base text-muted-foreground font-medium leading-tight">
-        {stat.label}
-      </div>
-      {/* Subtle hover effect */}
-      <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300"></div>
-    </div>
-  ))}
+    ))}
+  </div>
 </div>
+
 
   </>
   );
