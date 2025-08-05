@@ -32,7 +32,7 @@ const testimonials = [
   {
     name: "Sarah Chen",
     title: "Growth Manager",
-    company: "FitTracker Pro",
+    company: "Betway",
     rating: 5,
     text: "Appladder helped us scale from 10K to 1M+ downloads in just 6 months. Their AI optimization is incredible our CPI dropped 40% while quality improved dramatically.",
     avatar: "SC"
@@ -40,7 +40,7 @@ const testimonials = [
   {
     name: "Marcus Rodriguez",
     title: "Head of Marketing",
-    company: "EduLearn",
+    company: "Amazon",
     rating: 5,
     text: "The fraud protection alone saved us hundreds of thousands. Every install we get through Appladder converts to real, engaged users. Game-changing platform.",
     avatar: "MR"
@@ -48,9 +48,9 @@ const testimonials = [
   {
     name: "Emily Foster",
     title: "CMO",
-    company: "ShopSmart",
+    company: "Crypto.com",
     rating: 5,
-    text: "Best UA platform we've used. The dashboard insights are incredibly detailed, and our dedicated account manager feels like part of our team. Highly recommended!",
+    text: "Best UA platform we've used. The reports are incredibly detailed, and our dedicated account manager feels like part of our team. Highly recommended!",
     avatar: "EF"
   }
 ];

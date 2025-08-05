@@ -25,17 +25,17 @@ const ValueHighlights = [
   {
     icon: Zap,
     title: "Predictive AI & Smart Algorithms",
-    text: "Harness the power of machine learning and DSP algorithms to discover high-value users and automate media buying for maximum ROI.",
+    text: "Harness the power of machine learning and DSP algorithms to discover high value users and automate media buying for maximum ROI.",
   },
   {
     icon: Cpu,
     title: "AI Budget Optimization",
-    text: "Intelligent systems allocate your budget dynamically across best-performing channels and geographies for optimal growth.",
+    text: "Intelligent systems allocate your budget dynamically across best performing channels and geographies for optimal growth.",
   },
   {
     icon: Shuffle,
     title: "Global, Cross-Exchange Access",
-    text: "Reach premium audiences on various global ad platforms and exchanges—all managed seamlessly from a single platform.",
+    text: "Reach premium audiences on various global ad platforms and exchanges. All managed seamlessly from a single platform.",
   },
   {
     icon: TrendingUp,
@@ -75,19 +75,19 @@ const steps = [
   {
     icon: Lightbulb,
     title: "Strategic Launch",
-    desc: "Personalized AI-powered strategies go live—bidding programmatically, optimizing bids and creative from day one.",
+    desc: "Personalized AI-powered strategies go live bidding programmatically, optimizing bids and creative from day one.",
     num: "02"
   },
   {
     icon: Rocket,
     title: "Cross-Exchange Scaling",
-    desc: "Campaigns tap global inventory, targeting lookalike and high-intent users with dynamic creatives and smart capping.",
+    desc: "Campaigns tap global inventory, targeting lookalike and high intent users with dynamic creatives and smart capping.",
     num: "03"
   },
   {
     icon: BarChart3,
     title: "Analyze & Grow",
-    desc: "Track everything: installs, engagement, spend, ROI—so you scale what works, instantly.",
+    desc: "Track everything: installs, engagement, spend, ROI. So that you can scale what works, instantly.",
     num: "04"
   }
 ];
@@ -124,7 +124,7 @@ const AcquisitionPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white mt-12">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <span className="uppercase tracking-widest text-xs font-semibold text-primary">
@@ -133,7 +133,7 @@ const AcquisitionPage = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
               User Acquisition & Programmatic Growth
               <br />
-              <span className="gradient-text">Smarter Installs. Stronger ROI.</span>
+              <span className="gradient-text py-4">Smarter Installs. Stronger ROI.</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Appladder combines classic and programmatic UA in one streamlined platform.
@@ -145,12 +145,12 @@ const AcquisitionPage = () => {
       </section>
 
       {/* Value Highlights Section */}
-      <section className="py-12 bg-white">
+      <section className="py-6 bg-white">
         <div className="container mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="gradient-text">Key Benefits</span>
+              Our <span className="gradient-text py-4">Key Benefits</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Comprehensive acquisition solutions designed to maximize your app's growth potential
@@ -192,7 +192,7 @@ const AcquisitionPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              How <span className="gradient-text">Acquisition</span> with Appladder Works
+              How <span className="gradient-text py-4">Acquisition</span> with Appladder Works
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Go live in days, not weeks. Unified campaign launch through a proven four-step process

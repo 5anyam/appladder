@@ -84,24 +84,30 @@ const HeroSection = () => {
 
       </div>
     </section>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-4 p-4">
-    <div className="text-center">
-      <div className="text-3xl md:text-5xl font-bold gradient-text mb-2">2.5M+</div>
-      <div className="text-base text-muted-foreground">Apps Globally</div>
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 m-20">
+  {[
+    { number: "2.5M+", label: "Apps Globally" },
+    { number: "104+", label: "Countries" },
+    { number: "100B+", label: "Impressions/Day" },
+    { number: "100+", label: "Global Brands" },
+  ].map((stat, index) => (
+    <div
+      key={stat.label}
+      className="group bg-card/80 backdrop-blur-sm border border-border rounded-2xl p-6 sm:p-8 text-center transition-all duration-500 hover:shadow-brand hover:-translate-y-2 animate-fade-in-up"
+      style={{ animationDelay: `${index * 150}ms` }}
+    >
+      <div className="text-3xl sm:text-4xl lg:text-5xl font-black gradient-text mb-3 group-hover:scale-110 transition-transform duration-300">
+        {stat.number}
+      </div>
+      <div className="text-sm sm:text-base text-muted-foreground font-medium leading-tight">
+        {stat.label}
+      </div>
+      {/* Subtle hover effect */}
+      <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300"></div>
     </div>
-    <div className="text-center">
-      <div className="text-3xl md:text-5xl font-bold gradient-text mb-2">104+</div>
-      <div className="text-base text-muted-foreground">Countries</div>
-    </div>
-    <div className="text-center">
-      <div className="text-3xl md:text-5xl font-bold gradient-text mb-2">100 Billion+ </div>
-      <div className="text-base text-muted-foreground">Impressions/Day</div>
-    </div>
-    <div className="text-center">
-      <div className="text-3xl md:text-5xl font-bold gradient-text mb-2">100+</div>
-      <div className="text-base text-muted-foreground">Global Brands</div>
-    </div>
-  </div>
+  ))}
+</div>
+
   </>
   );
 };

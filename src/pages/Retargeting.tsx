@@ -100,16 +100,16 @@ const RetargetingReEngagementPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-white">
+      <section className="pb-12 pt-20 mt-12 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <span className="uppercase tracking-widest text-xs font-semibold text-primary">
               Retargeting & Re-engagement
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground my-6 leading-tight">
               Turn One-Time Installs Into
               <br />
-              <span className="gradient-text">Long-Term Revenue</span>
+              <span className="gradient-text py-4">Long-Term Revenue</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Not every new user means value. Our smart Retargeting engine identifies <b>dormant, churned, or distracted users</b> and brings them back—at the perfect moment—with engaging, personalized campaigns that drive repeat action.
@@ -120,12 +120,12 @@ const RetargetingReEngagementPage = () => {
       </section>
 
       {/* Value Highlights Section */}
-      <section className="py-12 bg-white">
+      <section className="py-6 bg-white">
         <div className="container mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="gradient-text">Re-engagement Features</span>
+              Our <span className="gradient-text py-4">Re-engagement Features</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Advanced retargeting solutions designed to bring back your most valuable users
@@ -167,7 +167,7 @@ const RetargetingReEngagementPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              How <span className="gradient-text">Retargeting & Re-engagement</span> Works
+              How <span className="gradient-text py-4">Retargeting & Re-engagement</span> Works
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Our platform brings your best users back at scale—using data, personalization, and live feedback

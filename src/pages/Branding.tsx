@@ -19,11 +19,6 @@ const ValueHighlights = [
     text: "Leverage video, interactive, playable, banners, and native units to deliver a consistent, memorable brand presence.",
   },
   {
-    icon: PenTool,
-    title: "Custom Design Studio",
-    text: "Our in-house team crafts custom creatives and brand assets for every campaign — localized, animated, always on-brand.",
-  },
-  {
     icon: Users,
     title: "Influencer & Creator Integration",
     text: "Expand reach with vetted influencers and creators who authentically amplify your message to millions.",
@@ -92,16 +87,16 @@ const BrandingPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 mt-12 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <span className="uppercase tracking-widest text-xs font-semibold text-primary">
               Branding
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-4xl mt-4 md:text-6xl font-bold text-foreground mb-6 leading-tight">
               Build Loyalty.
               <br />
-              <span className="gradient-text">Make Your App Unforgettable</span>
+              <span className="gradient-text py-4">Make Your App Unforgettable</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               First impressions matter. Let Appladder craft your app's brand identity, creative assets, and storytelling and amplify it to millions, everywhere your users spend time.
@@ -119,7 +114,7 @@ const BrandingPage = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="gradient-text">Branding Solutions</span>
+              Our <span className="gradient-text py-4">Branding Solutions</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Comprehensive branding services designed to make your app stand out and connect with users
@@ -161,7 +156,7 @@ const BrandingPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              How <span className="gradient-text">Branding</span> Works at Appladder
+              How <span className="gradient-text py-4">Branding</span> Works at Appladder
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Here's how we turn your brand vision into sustainable app growth and user love
