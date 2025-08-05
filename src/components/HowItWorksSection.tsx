@@ -95,14 +95,6 @@ const HowItWorksSection = () => {
             </Card>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-          <div className="inline-flex items-center gap-2 bg-gradient-primary text-white px-7 py-3 rounded-full font-medium shadow-brand text-lg tracking-wide">
-            <Rocket className="w-5 h-5" />
-            Ready to accelerate your growth?
-          </div>
-        </div>
       </div>
     </section>
   );

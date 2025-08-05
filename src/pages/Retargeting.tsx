@@ -25,18 +25,18 @@ const ValueHighlights = [
   },
   {
     icon: Bell,
-    title: "Event-Based Triggers",
+    title: "Event Based Triggers",
     text: "Trigger retargeting based on key actions like app open, cart abandon, level completion and more.",
   },
   {
     icon: Activity,
-    title: "Real-Time Attribution",
+    title: "Real Time Attribution",
     text: "Instantly measure reactivations, conversions, and the true impact of every campaign.",
   },
   {
     icon: RefreshCw,
     title: "Outcome-Driven",
-    text: "Increase DAU, boost retention, maximize ARPU, and turn one-time users into your best customers.",
+    text: "Increase DAU, boost retention, maximize ARPU, and turn one time users into your best customers.",
   },
 ];
 
@@ -57,7 +57,7 @@ const steps = [
   {
     icon: Bell,
     title: "Trigger",
-    desc: "Deliver campaigns when users take (or miss) key actions: app opens, add-to-cart, level complete, etc.",
+    desc: "Deliver campaigns when users take (or miss) key actions: app opens, add to cart, level complete, etc.",
     num: "03",
   },
   {
@@ -107,12 +107,12 @@ const RetargetingReEngagementPage = () => {
               Retargeting & Re-engagement
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground my-6 leading-tight">
-              Turn One-Time Installs Into
+              Turn One Time Installs Into
               <br />
-              <span className="gradient-text py-4">Long-Term Revenue</span>
+              <span className="gradient-text py-4">Long Term Revenue</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Not every new user means value. Our smart Retargeting engine identifies <b>dormant, churned, or distracted users</b> and brings them back—at the perfect moment—with engaging, personalized campaigns that drive repeat action.
+              Not every new user means value. Our smart Retargeting engine identifies <b>dormant, churned, or distracted users</b> and brings them back at the perfect moment with engaging, personalized campaigns that drive repeat action.
             </p>
             <GetstartedModalButton/>
           </div>
@@ -170,7 +170,7 @@ const RetargetingReEngagementPage = () => {
               How <span className="gradient-text py-4">Retargeting & Re-engagement</span> Works
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our platform brings your best users back at scale—using data, personalization, and live feedback
+              Our platform brings your best users back at scale using data, personalization, and live feedback
             </p>
           </div>
 
@@ -223,7 +223,7 @@ const RetargetingReEngagementPage = () => {
                   <li>Smart segmentation: Automatically find and reach every valuable user segment.</li>
                   <li>Personalized offers trigger up to 4x more conversions than generic reactivation ads.</li>
                   <li>Deep linking delivers seamless user journeys, not just app opens.</li>
-                  <li>Real-time ROI measurement—no more blind spend.</li>
+                  <li>Real time ROI measurement no more blind spend.</li>
                   <li>Scale winning audiences and creative on autopilot.</li>
                 </ul>
                 {/* Hover Effect Overlay */}

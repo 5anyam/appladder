@@ -47,7 +47,7 @@ const testimonials = [
   },
   {
     name: "Emily Foster",
-    title: "CMO",
+    title: "Performance Marketing Manager",
     company: "Crypto.com",
     rating: 5,
     text: "Best UA platform we've used. The reports are incredibly detailed, and our dedicated account manager feels like part of our team. Highly recommended!",

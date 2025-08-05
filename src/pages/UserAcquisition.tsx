@@ -98,7 +98,7 @@ const faqs = [
     a: "Setup is quick! Most apps go live in under 48 hours; analytics and optimizations are live from day one."
   },
   {
-    q: "Can I upload and optimize my own creatives?",
+    q: "Can custom creatives be uploaded and optimised?",
     a: "Yes, upload banners, videos and playables, our system runs continuous tests and shifts traffic to what converts best."
   },
   {

@@ -43,7 +43,7 @@ const HeroSection = () => {
 
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.6s' }}>
+        <div className="flex flex-col mt-6 sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.6s' }}>
           <Button variant="hero" size="xl" className="group">
             Get Started
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -51,7 +51,7 @@ const HeroSection = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-16 pb-6 animate-slide-up" style={{ animationDelay: '0.8s' }}>
+        <div className="mt-6 pb-6 animate-slide-up" style={{ animationDelay: '0.8s' }}>
   <p className="text-white/60 mb-6">Trusted by leading app publishers worldwide</p>
   <div className="flex flex-wrap justify-center items-center gap-8">
     {/* Each logo: grayscale, colored on hover */}
@@ -94,7 +94,7 @@ const HeroSection = () => {
     ].map((stat, index) => (
       <div
         key={stat.label}
-        className="group bg-card/80 backdrop-blur-sm border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 text-center transition-all duration-500 hover:shadow-brand hover:-translate-y-2 animate-fade-in-up relative overflow-hidden"
+        className="group bg-card/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 text-center transition-all duration-500 hover:shadow-brand hover:-translate-y-2 animate-fade-in-up relative overflow-hidden"
         style={{ animationDelay: `${index * 150}ms` }}
       >
         <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black gradient-text mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">

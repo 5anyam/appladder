@@ -10,17 +10,14 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center">
-                <div className="text-xl font-bold text-white select-none">A</div>
-              </div>
-              <span className="text-2xl font-bold select-none">Appladder</span>
+              <img className="h-10 w-28 rounded-xl" src="/logo.jpg" alt="logo" />
             </div>
             <p className="text-slate-300 mb-6 leading-relaxed">
               Accelerating app growth through advanced user acquisition, performance marketing, and AI-powered optimization.
             </p>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com/yourpage"
+                href="https://facebook.com/appladder"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -29,7 +26,7 @@ const Footer = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://twitter.com/yourhandle"
+                href="https://twitter.com/appladder"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
@@ -38,7 +35,7 @@ const Footer = () => {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/company/yourcompany"
+                href="https://linkedin.com/company/appladder"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -47,7 +44,7 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com/yourhandle"
+                href="https://instagram.com/appladder"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
