@@ -109,7 +109,7 @@ const BrandingPage = () => {
       </section>
 
       {/* Value Highlights Section */}
-      <section className="py-12 bg-white">
+      <section className="py-4 bg-white">
         <div className="container mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-16">
