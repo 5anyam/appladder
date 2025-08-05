@@ -1,33 +1,33 @@
-import { Shield, Zap, Globe, Star, TrendingUp, Target } from "lucide-react";
+import { Shield, Zap, Cpu, Smartphone, TrendingUp, Target } from "lucide-react";
 
 const benefits = [
   {
-    
+    icon: Cpu,
     title: "AI-Powered Optimization",
     description: "Machine learning algorithms continuously optimize your campaigns for maximum performance and ROI."
   },
   {
-    
+    icon: Shield,
     title: "Fraud-Free Results",
     description: "Advanced fraud detection and prevention systems ensure every install is genuine and valuable."
   },
   {
-    
-    title: "2.5M+ Apps Globally",
-    description: "Access to the world's largest network of premium publishers and advertising platforms."
+    icon: Smartphone,
+    title: "Cross-Platform Excellence",
+    description: "Seamlessly run campaigns across iOS, Android, and web platforms with unified tracking and optimization."
   },
   {
-    
+    icon: TrendingUp,
     title: "Global Reach with Local Insights",
     description: "Run campaigns in over 104 countries with support for localization, cultural adaptation, and localized optimization strategies."
   },
   {
-    
+    icon: Zap,
     title: "Proven Growth Results",
     description: "Track record of scaling apps from thousands to millions of users with sustainable growth strategies."
   },
   {
-   
+    icon: Target,
     title: "Advanced Targeting",
     description: "Advanced audience segmentation and lookalike modeling to reach your ideal users efficiently."
   }

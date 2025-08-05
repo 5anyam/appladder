@@ -5,7 +5,7 @@ const solutions = [
   {
     icon: Users,
     title: "User Acquisition",
-    description: "Accelerate your app growth by acquiring quality users through data-driven campaigns and global reach.",
+    description: "Accelerate your app growth by acquiring quality users through data driven campaigns and global reach.",
     features: [
       "Lookalike & Interest Targeting",
       "Global & Regional Traffic",
@@ -16,7 +16,7 @@ const solutions = [
   {
     icon: BarChart,
     title: "Retargeting & Re-engagement",
-    description: "Boost retention and revive dormant users with event-triggered, personalized campaigns across all channels.",
+    description: "Boost retention and revive dormant users with event triggered, personalized campaigns across all channels.",
     features: [
       "Smart Segmentation",
       "Event-Based Triggers",
