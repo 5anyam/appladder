@@ -10,7 +10,7 @@ const services = [
     icon: Zap,
     title: "User Acquisition",
     desc:
-      "Smarter growth, stronger LTV. Appladder finds your highest value users around the globe with predictive AI, creative testing, and seamless scaling. So that you can get the installs that truly convert and retain.",
+      "Smarter growth, stronger LTV. Appladder finds your highest value users around the globe with predictive AI, creative testing and seamless scaling. So that you can get the installs that truly convert and retain.",
   },
   {
     icon: RefreshCw,
@@ -56,10 +56,10 @@ const AboutUsPage = () => {
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
               We <span className="gradient-text py-4">Elevate App Growth</span>
-              <br /> with Data, Creativity, & Tech
+              <br /> with Data, Creativity & Tech
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Appladder turns every mobile app's growth goal into reality, blending smart data, creative science, and
+              Appladder turns every mobile app's growth goal into reality, blending smart data, creative science and
               cutting-edge tech. From quality user acquisition to lasting engagement, we help you scale, succeed and build a brand people love.
             </p>
             <GetstartedModalButton />
@@ -77,7 +77,7 @@ const AboutUsPage = () => {
             <p className="text-xl text-muted-foreground mb-4 leading-relaxed max-w-3xl mx-auto">
               At Appladder, we're passionate about helping app founders and marketers achieve sustainable growth.
               We combine deep data insights with creative strategies to deliver real users who stick around, driving value beyond just installs.
-              Honest results, clear communication, and long-term partnerships are at the heart of everything we do.
+              Honest results, clear communication and long-term partnerships are at the heart of everything we do.
             </p>
           </div>
         </div>

@@ -11,12 +11,12 @@ const ValueHighlights = [
   {
     icon: Star,
     title: "Brand-Led Creative",
-    text: "We don't just run ads — we tell your brand story through impactful, mobile-first creative that connects and converts.",
+    text: "We don't just run ads we tell your brand story through impactful, mobile-first creative that connects and converts.",
   },
   {
     icon: MonitorPlay,
     title: "High-Impact Formats",
-    text: "Leverage video, interactive, playable, banners, and native units to deliver a consistent, memorable brand presence.",
+    text: "Leverage video, interactive, playable, banners and native units to deliver a consistent, memorable brand presence.",
   },
   {
     icon: Users,
@@ -40,7 +40,7 @@ const steps = [
   {
     icon: PenTool,
     title: "Discover Your Brand",
-    desc: "We audit your app, product, and values to define the look, voice, and intent for every creative.",
+    desc: "We audit your app, product and values to define the look, voice and intent for every creative.",
     num: "01",
   },
   {
@@ -52,13 +52,13 @@ const steps = [
   {
     icon: Users,
     title: "Amplify & Distribute",
-    desc: "Launch campaigns across premium networks, influencer partners, and social to maximize positive brand impressions.",
+    desc: "Launch campaigns across premium networks, influencer partners and social to maximize positive brand impressions.",
     num: "03",
   },
   {
     icon: Star,
     title: "Analyze Brand Lift",
-    desc: "Track reach, engagement, sentiment, and impact in real time — not just views, but meaningful results.",
+    desc: "Track reach, engagement, sentiment and impact in real time — not just views, but meaningful results.",
     num: "04",
   },
 ];
@@ -71,11 +71,11 @@ const faqs = [
   },
   {
     q: "How do you measure brand campaign success?",
-    a: "We provide full brand lift analytics: reach, brand recall, engagement, positive sentiment, and actual user growth all in your reports.",
+    a: "We provide full brand lift analytics: reach, brand recall, engagement, positive sentiment and actual user growth all in your reports.",
   },
   {
     q: "Do you also provide marketing?",
-    a: "Absolutely! We manage vetting, activation, and reporting for real creators who fit your brand and drive results.",
+    a: "Absolutely! We manage vetting, activation and reporting for real creators who fit your brand and drive results.",
   },
 ];
 
@@ -99,7 +99,7 @@ const BrandingPage = () => {
               <span className="gradient-text py-4">Make Your App Unforgettable</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              First impressions matter. Let Appladder craft your app's brand identity, creative assets, and storytelling and amplify it to millions, everywhere your users spend time.
+              First impressions matter. Let Appladder craft your app's brand identity, creative assets and storytelling and amplify it to millions, everywhere your users spend time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <GetstartedModalButton/>
