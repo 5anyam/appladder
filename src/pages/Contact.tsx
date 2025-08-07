@@ -14,9 +14,9 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: "Phone",
-    value: "+1 234 567 890",
-    href: "tel:+1234567890"
+    label: "Whatsapp",
+    value: "+121-7773-5600",
+    href: "https://wa.me/+121777356000"
   },
   {
     icon: Mail,

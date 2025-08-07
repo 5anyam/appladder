@@ -159,8 +159,8 @@ const ContactSection = () => {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold">Call Us</div>
-                    <div className="text-muted-foreground">+1 (555) 123-4567</div>
+                    <div className="font-semibold">Whatsapp Only</div>
+                    <div className="text-muted-foreground">+121-7773-5600</div>
                   </div>
                 </CardContent>
               </Card>
