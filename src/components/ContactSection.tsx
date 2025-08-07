@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageCircle, Link } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -146,10 +146,10 @@ const ContactSection = () => {
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
-                  <div>
+                  <Link href="mailto:hello@appladder.us"><div>
                     <div className="font-semibold">Email Us</div>
                     <div className="text-muted-foreground">hello@appladder.us</div>
-                  </div>
+                  </div></Link>
                 </CardContent>
               </Card>
 
@@ -158,10 +158,10 @@ const ContactSection = () => {
                   <div className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
-                  <div>
+                  <Link href="https://wa.me/+12177735600"><div>
                     <div className="font-semibold">Whatsapp Only</div>
                     <div className="text-muted-foreground">+121-7773-5600</div>
-                  </div>
+                  </div></Link>
                 </CardContent>
               </Card>
 
