@@ -146,10 +146,10 @@ const ContactSection = () => {
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
-                  <Link href="mailto:hello@appladder.us"><div>
+                  <a href="mailto:hello@appladder.us"><div>
                     <div className="font-semibold">Email Us</div>
                     <div className="text-muted-foreground">hello@appladder.us</div>
-                  </div></Link>
+                  </div></a>
                 </CardContent>
               </Card>
 
@@ -158,10 +158,10 @@ const ContactSection = () => {
                   <div className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
-                  <Link href="https://wa.me/+12177735600"><div>
+                  <a href="https://wa.me/+12177735600"><div>
                     <div className="font-semibold">Whatsapp Only</div>
                     <div className="text-muted-foreground">+121-7773-5600</div>
-                  </div></Link>
+                  </div></a>
                 </CardContent>
               </Card>
 

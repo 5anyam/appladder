@@ -16,13 +16,13 @@ const contactInfo = [
     icon: Phone,
     label: "Whatsapp",
     value: "+121-7773-5600",
-    href: "https://wa.me/+121777356000"
+    href: "https://wa.me/+12177735600"
   },
   {
     icon: Mail,
     label: "Email",
-    value: "support@appladder.us",
-    href: "mailto:support@appladder.us"
+    value: "hello@appladder.us",
+    href: "mailto:hello@appladder.us"
   }
 ];
 
