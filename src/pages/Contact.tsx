@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Link } from "react-router-dom";
 
 const contactInfo = [
   {
@@ -87,7 +86,7 @@ const ContactUsPage = () => {
                       <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300">
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
-                      <Link to={info.href}><div>
+                      <a href={info.href}><div>
                         <h3 className="font-semibold text-foreground mb-1">{info.label}</h3>
                         {info.href ? (
                           <a  
@@ -100,7 +99,7 @@ const ContactUsPage = () => {
                             {info.value}
                           </address>
                         )}
-                      </div></Link>
+                      </div></a>
                     </div>
                     {/* Hover Effect Overlay */}
                     <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
