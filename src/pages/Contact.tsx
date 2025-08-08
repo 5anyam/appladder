@@ -5,45 +5,71 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const contactInfo = [
+// Define proper types instead of using 'any'
+interface ContactInfo {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  value: string;
+  href: string | null;
+  action: (() => void) | null;
+}
+
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+const contactInfo: ContactInfo[] = [
   {
     icon: MapPin,
     label: "Address",
     value: "447 Broadway 2ND FL, New York, NY 10013",
-    href: null
+    href: null,
+    action: null
   },
   {
     icon: Phone,
     label: "Whatsapp",
     value: "+121-7773-5600",
-    href: "https://wa.me/12177735600" // Removed + from WhatsApp link
+    href: "https://wa.me/12177735600",
+    action: () => window.open("https://wa.me/12177735600", "_blank")
   },
   {
     icon: Mail,
     label: "Email",
     value: "hello@appladder.us",
-    href: "mailto:hello@appladder.us"
+    href: "mailto:hello@appladder.us",
+    action: () => window.open("mailto:hello@appladder.us", "_self")
   }
 ];
 
 const ContactUsPage = () => {
-  // Simple form state
-  const [form, setForm] = useState({
+  // Properly typed form state
+  const [form, setForm] = useState<FormData>({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState<boolean>(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // TODO: Integrate with backend or form provider
     setSubmitted(true);
+  };
+
+  // Properly typed contact click handler
+  const handleContactClick = (info: ContactInfo) => {
+    if (info.action) {
+      info.action();
+    }
   };
 
   return (
@@ -78,34 +104,38 @@ const ContactUsPage = () => {
               {contactInfo.map((info, index) => (
                 <Card 
                   key={info.label}
-                  className="group hover:shadow-brand transition-all duration-300 bg-card/80 backdrop-blur-sm border-0 relative"
+                  className={`group hover:shadow-brand transition-all duration-300 bg-card/80 backdrop-blur-sm border-0 relative ${
+                    info.action ? 'cursor-pointer hover:scale-[1.02]' : ''
+                  }`}
                   style={{ animationDelay: `${index * 100}ms` }}
+                  onClick={() => handleContactClick(info)}
                 >
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300">
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
-                      <div>
+                      <div className="flex-1">
                         <h3 className="font-semibold text-foreground mb-1">{info.label}</h3>
-                        {info.href ? (
-                          <a 
-                            href={info.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
-                          >
-                            {info.value}
-                          </a>
-                        ) : (
-                          <address className="not-italic text-muted-foreground">
-                            {info.value}
-                          </address>
+                        <div className={`text-muted-foreground ${
+                          info.action ? 'group-hover:text-primary' : ''
+                        } transition-colors`}>
+                          {info.value}
+                        </div>
+                        {info.action && (
+                          <div className="text-xs text-primary mt-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                            Click to {info.label.toLowerCase()}
+                          </div>
                         )}
                       </div>
+                      {info.action && (
+                        <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                          →
+                        </div>
+                      )}
                     </div>
                     {/* Hover Effect Overlay */}
-                    <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-lg"></div>
                   </CardContent>
                 </Card>
               ))}
