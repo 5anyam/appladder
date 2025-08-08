@@ -16,7 +16,7 @@ const contactInfo = [
     icon: Phone,
     label: "Whatsapp",
     value: "+121-7773-5600",
-    href: "https://wa.me/+12177735600"
+    href: "https://wa.me/12177735600" // Removed + from WhatsApp link
   },
   {
     icon: Mail,
@@ -78,7 +78,7 @@ const ContactUsPage = () => {
               {contactInfo.map((info, index) => (
                 <Card 
                   key={info.label}
-                  className="group hover:shadow-brand transition-all duration-300 bg-card/80 backdrop-blur-sm border-0"
+                  className="group hover:shadow-brand transition-all duration-300 bg-card/80 backdrop-blur-sm border-0 relative"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <CardContent className="p-6">
@@ -86,11 +86,14 @@ const ContactUsPage = () => {
                       <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300">
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
-                      <a href={info.href}><div>
+                      <div>
                         <h3 className="font-semibold text-foreground mb-1">{info.label}</h3>
                         {info.href ? (
-                          <a  
-                            className="text-muted-foreground hover:text-primary transition-colors"
+                          <a 
+                            href={info.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
                           >
                             {info.value}
                           </a>
@@ -99,7 +102,7 @@ const ContactUsPage = () => {
                             {info.value}
                           </address>
                         )}
-                      </div></a>
+                      </div>
                     </div>
                     {/* Hover Effect Overlay */}
                     <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
@@ -107,6 +110,7 @@ const ContactUsPage = () => {
                 </Card>
               ))}
             </div>
+
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <Card className="group hover:shadow-brand transition-all duration-500 bg-card/80 backdrop-blur-sm border-0 overflow-hidden">
