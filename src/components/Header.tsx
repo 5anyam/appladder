@@ -66,7 +66,7 @@ const Header = () => {
                 Advertiser Sign Up
               </NavLink>
               <NavLink
-                to="/affiliate-signup"
+                to="/publisher-signup"
                 className="px-4 py-2 rounded-full text-sm font-semibold border-2 border-violet-500 text-violet-600 bg-transparent hover:bg-violet-600 hover:text-white transition-all duration-200 whitespace-nowrap"
               >
                 Publisher Sign Up
